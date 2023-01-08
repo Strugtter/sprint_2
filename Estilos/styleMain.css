@@ -1,0 +1,41 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: content-box;
+    }
+    
+    body{
+        display: flex;
+        flex-direction: column;
+        padding: 50px;
+        background-color:aqua;
+    }
+    
+    
+    #contenedorVideos{
+        display: flex;
+        gap: 50px;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+
+
+    .main{
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .main_videos{
+        width: 400px;
+        height: 300px;
+    }
+    
+    .video {
+        width: 100%;
+        height: 100%;
+    }
+
+    .main_filtros{
+        display: flex;
+
+    }
