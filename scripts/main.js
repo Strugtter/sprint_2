@@ -110,7 +110,7 @@ arrayFiltros.forEach((genero) => {
 });
 
 // Buscar en los videos por nombre
-console.log(videos);
+
 const buttonBuscar = document.getElementById("buscar");
 buttonBuscar.addEventListener("click", ()=>{
     const nameBuscar = document.getElementById("buscarName");
