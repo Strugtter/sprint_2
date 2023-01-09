@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./Estilos/styleMain.css">
+    <link rel="stylesheet" href="./Estilos/styleMain.css" />
     <title>sprint 2</title>
   </head>
   <body>
@@ -13,17 +13,21 @@
     </header>
 
     <main class="main">
-        
       <section class="main_filtros">
         <button id="todos">Todos</button>
         <button id="salsa">Salsa</button>
         <button id="merengue">Merengue</button>
         <button id="regaetton">Regaetton</button>
+        <label for="buscador">
+          <input type="text" placeholder="buscar" id="buscarName" />
+        </label>
+        <button id="buscar">search</button>
       </section>
 
       <section id="contenedorVideos">
         <article class="main_videos">
-          <iframe class="video"
+          <iframe
+            class="video"
             src=""
             frameborder="0"
             allow="autoplay; fullscreen; picture-in-picture"
@@ -31,8 +35,6 @@
           ></iframe>
         </article>
       </section>
-
-
     </main>
 
     <script src="./scripts/main.js" type="module"></script>

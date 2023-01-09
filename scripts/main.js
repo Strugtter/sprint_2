@@ -1,15 +1,15 @@
-
 //  Lectura del local storage.
 
 let arrayNuevo = JSON.parse(localStorage.getItem("nuevoVideo"));
 
-if (arrayNuevo === null){
+if (arrayNuevo === null) {
   arrayNuevo = [];
-} 
+}
 
 // Creo el array de la lista de 30 videos - Tres categorias Salsa, Merengue y reggaton.
 
-const videos = [...arrayNuevo,
+const videos = [
+  ...arrayNuevo,
   {
     genero: "salsa",
     autor: "Ricardo Ray y Bobby cruz",
@@ -21,6 +21,7 @@ const videos = [...arrayNuevo,
     genero: "salsa",
     autor: "grupo niche",
     nombreCancion: "Cali pachanguero",
+    //url: "https://www.tropicanafm.com/wp-content/uploads/2018/06/cali-pachanguero.jpg",
     url: "https://player.vimeo.com/video/67667065?h=a2dad60696",
   },
 
@@ -53,7 +54,6 @@ const videos = [...arrayNuevo,
   },
 ];
 
-
 console.log(videos);
 const imprimirVideos = (videos, contenedor) => {
   // vaciar el contenido del contenedor
@@ -68,7 +68,7 @@ const imprimirVideos = (videos, contenedor) => {
             frameborder="0"
             allow="autoplay; fullscreen; picture-in-picture"
             allowfullscreen
-          ></iframe>        
+          ></iframe>     
         `;
     contenedor.appendChild(article);
   });
@@ -98,7 +98,7 @@ arrayFiltros.forEach((genero) => {
   console.log(generoButton);
 
   generoButton.addEventListener("click", () => {
-    let filtrado = videos.filter(video => video.genero == genero);
+    let filtrado = videos.filter((video) => video.genero == genero);
     console.log("test");
     console.log(filtrado);
     let filtradoArray = genero === "todos" ? videos : filtrado;
@@ -109,6 +109,13 @@ arrayFiltros.forEach((genero) => {
   });
 });
 
-
-
-
+// Buscar en los videos por nombre
+console.log(videos);
+const buttonBuscar = document.getElementById("buscar");
+buttonBuscar.addEventListener("click", ()=>{
+    const nameBuscar = document.getElementById("buscarName");
+    console.log(nameBuscar.value);
+    let buscado = videos.filter(name => name.nombreCancion == nameBuscar.value);
+    console.log(buscado);
+    imprimirVideos(buscado,contenedorVideos);    
+});
