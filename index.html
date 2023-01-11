@@ -8,31 +8,30 @@
     <title>sprint 2</title>
   </head>
   <body>
-    <header>
-      <h3><a href="./paginas/agregarVideo.html">Agregar personajes</a></h3>
+    <header class="cabecera">
+      <h3 id="agregarVideo"><a href="./paginas/agregarVideo.html">Agregar video</a></h3>
+      <h1 id="titulo"> YOUTUBE-MAKAIA</h1>
     </header>
 
     <main class="main">
       <section class="main_filtros">
-        <button id="todos">Todos</button>
-        <button id="salsa">Salsa</button>
-        <button id="merengue">Merengue</button>
-        <button id="regaetton">Regaetton</button>
-        <label for="buscador">
-          <input type="text" placeholder="buscar" id="buscarName" />
-        </label>
-        <button id="buscar">search</button>
+        <article>
+          <button id="todos">Todos</button>
+          <button id="salsa">Salsa</button>
+          <button id="merengue">Merengue</button>
+          <button id="regaetton">Regaetton</button>
+        </article>
+        <article>
+          <label for="buscador">
+            <input type="text" placeholder="buscar titulo" id="buscarName" />
+          </label>
+          <button id="buscar">Buscar</button>
+        </article>
       </section>
 
       <section id="contenedorVideos">
         <article class="main_videos">
-          <iframe
-            class="video"
-            src=""
-            frameborder="0"
-            allow="autoplay; fullscreen; picture-in-picture"
-            allowfullscreen
-          ></iframe>
+        
         </article>
       </section>
     </main>

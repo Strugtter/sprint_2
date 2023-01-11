@@ -8,13 +8,14 @@ if (arrayNuevo === null) {
 
 // Creo el array de la lista de 30 videos - Tres categorias Salsa, Merengue y reggaton.
 
-const videos = [
+ export const videos = [
   ...arrayNuevo,
-  {
+  {    
     genero: "salsa",
-    autor: "Ricardo Ray y Bobby cruz",
-    nombreCancion: "Sonido bestial",
-    url: "https://player.vimeo.com/video/156907659?h=9915b1b95b",
+    autor: "El gran combo de PR",
+    nombreCancion: "Yo soy tu amigo",
+    url: "https://player.vimeo.com/video/145453413?h=e83a6bf78a",
+    //url: "https://player.vimeo.com/video/156907659?h=9915b1b95b"
   },
 
   {
@@ -41,20 +42,22 @@ const videos = [
 
   {
     genero: "regaetton",
-    autor: "Don omar",
-    nombreCancion: "Bandolero",
-    url: "https://player.vimeo.com/video/172711304?h=ea11eae029",
+    autor: "Tito el bambino",
+    nombreCancion: "Enamorado",
+    url: "https://player.vimeo.com/video/12493009?h=289a9e191c",
   },
 
   {
     genero: "regaetton",
-    autor: "Hector el father",
-    nombreCancion: "Payaso",
-    url: "https://player.vimeo.com/video/17116610?h=f748c28b9c",
+    autor: "Daddy Yankee",
+    nombreCancion: "Sigueme y te sigo",
+    url: "https://player.vimeo.com/video/127972192?h=c342f4a239",
   },
 ];
 
-console.log(videos);
+
+localStorage.setItem("todosVideos", JSON.stringify(videos));
+
 const imprimirVideos = (videos, contenedor) => {
   // vaciar el contenido del contenedor
   contenedor.innerHTML = "";
@@ -63,22 +66,29 @@ const imprimirVideos = (videos, contenedor) => {
     const article = document.createElement("article");
     article.classList.add("main_videos");
     article.innerHTML = `
+
         <iframe class="video"
             src= ${video.url}
             frameborder="0"
             allow="autoplay; fullscreen; picture-in-picture"
             allowfullscreen
-          ></iframe>     
+          ></iframe>
+          <h1 class="nameCancion" >Titulo: ${video.nombreCancion}</h1>
+          <h3 class="nameAutor" id=${videos.indexOf(video)} >Autor: ${video.autor}</h3> 
+
         `;
     contenedor.appendChild(article);
   });
 };
+
+//<h1 class="nameCancion" ><a href="./paginas/datosVideo.html">Titulo: ${video.nombreCancion}</a></h1>
 
 // Capturar el contenedor donde van a ir los videos.
 
 const main = document.querySelector(".main");
 
 const contenedorVideos = document.getElementById("contenedorVideos");
+console.log(contenedorVideos);
 
 document.addEventListener("DOMContentLoaded", () => {
   imprimirVideos(videos, contenedorVideos);
@@ -114,8 +124,25 @@ arrayFiltros.forEach((genero) => {
 const buttonBuscar = document.getElementById("buscar");
 buttonBuscar.addEventListener("click", ()=>{
     const nameBuscar = document.getElementById("buscarName");
-    console.log(nameBuscar.value);
-    let buscado = videos.filter(name => name.nombreCancion == nameBuscar.value);
-    console.log(buscado);
+    // let buscado = videos.filter(name => name.nombreCancion === nameBuscar.value);
+    const buscado = videos.filter(video => 
+      video.nombreCancion.toLowerCase().trim().includes(nameBuscar.value.toLowerCase().trim())     
+    );
     imprimirVideos(buscado,contenedorVideos);    
 });
+
+
+// Dirigir al detalle del video.
+
+document.addEventListener("click", (event)=> {
+  
+ const { target } = event;
+
+ if(target.classList.contains('nameAutor')){
+
+   localStorage.setItem('seeDetails', JSON.stringify(target.id));
+   window.location.href = "./paginas/datosVideo.html";
+
+ }
+})
+

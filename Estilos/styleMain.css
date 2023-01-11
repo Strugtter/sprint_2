@@ -8,34 +8,156 @@
         display: flex;
         flex-direction: column;
         padding: 50px;
-        background-color:aqua;
+        background-color:white;
+        gap:20px;
+
     }
     
     
     #contenedorVideos{
         display: flex;
-        gap: 50px;
+        gap: 100px;
         flex-wrap: wrap;
         justify-content: space-evenly;
+
     }
 
 
     .main{
         display: flex;
         flex-direction: column;
+        padding: 10px;
+        gap: 20px;
     }
     
     .main_videos{
-        width: 400px;
+        width: 350px;
         height: 300px;
-    }
+        position: relative;
+    }    
     
     .video {
         width: 100%;
         height: 100%;
     }
 
+    .main_videos iframe {        
+        width: 100%;
+        height: 100%;
+    }
+
     .main_filtros{
         display: flex;
+        gap: 665px;
+    }
 
+    #agregarVideo{
+        float:right;
+    }
+
+
+
+    #todos, #salsa, #merengue, #regaetton, #buscar {
+        border-radius: 4px;
+        background-color: gray;
+        width: 100px;
+        height: 30px;
+        color: white;
+    }
+
+
+    #buscarName{
+        width: 300px;
+        height: 30px;
+    }
+
+    .nameCancion {
+        position: absolute;
+        bottom:0;
+    }    
+    .nameAutor {
+        position: absolute;
+        bottom:5;
+    }
+
+    .botonEliminar {
+        position: absolute;
+        bottom:0;
+    }
+
+    @media screen and (max-width: 370px){
+
+        body{
+            display: flex;
+            flex-direction: column;
+            padding: 0px;
+            background-color:aliceblue;
+            gap:5px;
+            font-size: xx-small;  
+        }
+
+        .main{
+            display: flex;
+            flex-direction: column;
+            padding: 0px;
+            gap: 5px;
+        }
+                
+        #contenedorVideos{
+            gap: 5px;
+            padding: 2px;
+            flex-wrap:wrap;
+            justify-content:space-evenly;
+        }  
+
+        .main_videos{
+            width: 80px;
+            height: 90px;
+            position: relative;
+        }           
+
+    
+        .main_filtros{
+            display: flex;
+            flex-direction: column;
+            gap: 0px;
+        }
+    
+        #agregarVideo{
+            float:right;
+        }
+        
+        #todos, #salsa, #merengue, #regaetton, #buscar {
+            border-radius: 4px;
+            background-color: gray;
+            width: 40px;
+            height: 10px;
+            color: white;
+            font-size: xx-small;
+        }
+    
+    
+        #buscarName{
+            width: 100px;
+            height: 10px;
+            font-size: xx-small;
+        }
+    
+        .nameCancion {
+            position: absolute;
+            bottom:0;
+        }    
+        .nameAutor {
+            position: absolute;
+            bottom:5;
+        }
+    
+        .botonEliminar {
+            position: absolute;
+            bottom:0;
+        }
+        
+        #titulo, #agregarVideo{
+            font-size: xx-small;
+        }
     }

@@ -1,38 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../Estilos/styleVideos.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../Estilos/styleVideos.css" />
     <title>AgregarVideo</title>
-</head>
-<body>
-
-    <h1>Agregar nuevo video</h1>
-    <h2><a href="../index.html">regresar a home</a></h2>
-    <form class="form">
-        <label for="genero"> Genero
+  </head>
+  <body>
+    <header>
+      <h2 id="title"><a href="../index.html">PRINCIPAL</a></h2>
+    </header>
+    <main class="Main">
+      <form class="form">
+        <label for="genero" id="etiqueta1"> Genero </label>
         <select name="" id="genero" required>
-            <option value="">Seleccione una opción</option>
-            <option value="salsa">Salsa</option>
-            <option value="regaetton">Regaetton</option>
-            <option value="merengue">Merengue</option>
+          <option value="">Seleccione una opción</option>
+          <option value="salsa">Salsa</option>
+          <option value="regaetton">Regaetton</option>
+          <option value="merengue">Merengue</option>
         </select>
-        </label>
-        <label for="autor">Autor
-            <input id="autor"  type="text" required>
-        </label>
-        <label for="nombre">Nombre de la cancion
-            <input id="nombreCancion"  type="text" required>
-        </label>
-        <label for="url">URL del video
-            <input id="url"  type="text" required>
-        </label>
-        <button type="submit"> Enviar </button>
-    </form>
 
-    <script src="../scripts/agregarVideo.js" type="module"></script>   
+        <label for="autor" id="etiqueta2">Autor </label>
+        <input id="autor" type="text" placeholder="Digita el autor de la canción" required />
 
-</body>
+        <label for="nombre" id="etiqueta3">Nombre de la cancion </label>
+        <input id="nombreCancion" type="text" placeholder="Digita el nombre de la canción" required />
+
+        <label for="url" id="etiqueta4">URL del video </label>
+        <input id="url" type="text" placeholder="Ingrese el link del video" required />
+
+        <button type="submit" id="botonAgregar">AGREGAR</button>
+      </form>
+    </main>
+
+    <script src="../scripts/agregarVideo.js" type="module"></script>
+  </body>
 </html>
