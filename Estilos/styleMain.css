@@ -115,6 +115,8 @@
             background-color:aliceblue;
             gap:5px;
             font-size: xx-small;  
+            background-color:black;
+            color: white;
         }
 
         .main{
