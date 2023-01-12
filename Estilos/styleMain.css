@@ -23,8 +23,6 @@
         color: white;
 
     }
-
-
     .main{
         display: flex;
         flex-direction: column;
@@ -79,11 +77,13 @@
 
 
     #todos, #salsa, #merengue, #regaetton, #buscar {
-        border-radius: 4px;
-        background-color: gray;
+        border-radius: 6px;
+        background-color: black;
         width: 100px;
         height: 30px;
         color: white;
+        border-color: gray;
+        
     }
 
 

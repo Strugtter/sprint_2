@@ -12,6 +12,13 @@ if (arrayNuevo === null) {
   ...arrayNuevo,
   {    
     genero: "salsa",
+    autor: "Andy Montañez",
+    nombreCancion: "Casi te olvido",
+    url: "https://player.vimeo.com/video/101172807?h=7bef5634b1",
+    //url: "https://player.vimeo.com/video/156907659?h=9915b1b95b"
+  },
+  {    
+    genero: "salsa",
     autor: "El gran combo de PR",
     nombreCancion: "Yo soy tu amigo",
     url: "https://player.vimeo.com/video/145453413?h=e83a6bf78a",
@@ -41,6 +48,13 @@ if (arrayNuevo === null) {
   },
 
   {
+    genero: "merengue",
+    autor: "Sergio vargas",
+    nombreCancion: "No eres una mas",
+    url: "https://player.vimeo.com/video/66048577?h=9f4a890352",
+  },
+
+  {
     genero: "regaetton",
     autor: "Tito el bambino",
     nombreCancion: "Enamorado",
@@ -53,6 +67,173 @@ if (arrayNuevo === null) {
     nombreCancion: "Sigueme y te sigo",
     url: "https://player.vimeo.com/video/127972192?h=c342f4a239",
   },
+
+  {
+    genero: "regaetton",
+    autor: "Daddy Yankee",
+    nombreCancion: "Limbo",
+    url: "https://player.vimeo.com/video/55170685?h=4b0eccac8f",
+  },
+  {    
+    genero: "regaetton",
+    autor: "Don omar",
+    nombreCancion: "Pobre diablA",
+    url: "https://player.vimeo.com/video/185116298?h=83268967a8",
+    //url: "https://player.vimeo.com/video/156907659?h=9915b1b95b"
+  },
+  {    
+    genero: "salsa",
+    autor: "Tito nieves",
+    nombreCancion: "Si me tenias",
+    url: "https://player.vimeo.com/video/131870741?h=6084d492c1&title=0&byline=0&portrait=0",
+
+  },
+  {    
+    genero: "salsa",
+    autor: "Marc Anthony",
+    nombreCancion: "A quien quiero mentirle",
+    url: "https://player.vimeo.com/video/23071238?h=e15fa79123",
+
+  },
+  {    
+    genero: "salsa",
+    autor: "Tony Vega",
+    nombreCancion: "Lo mio es amor",
+    url: "https://player.vimeo.com/video/27507485?h=2299509bd2",
+
+  },
+  {    
+    genero: "salsa",
+    autor: "Tony Vega",
+    nombreCancion: "Esa mujer",
+    url: "https://player.vimeo.com/video/518313846?h=695cda1bc0",
+
+  },
+  {    
+    genero: "salsa",
+    autor: "Marc Anthony y Tito el bambino",
+    nombreCancion: "Porque les mientes",
+    url: "https://player.vimeo.com/video/58459102?h=512b4ef72b",
+
+  },
+  {    
+    genero: "salsa",
+    autor: "Tito nieves",
+    nombreCancion: "Yo se que es mentira",
+    url: "https://player.vimeo.com/video/148739082?h=f3b6c4ff13&title=0&byline=0&portrait=0",
+
+  },
+  {    
+    genero: "salsa",
+    autor: "Guayacan",
+    nombreCancion: "Muchachita",
+    url: "https://player.vimeo.com/video/673495728?h=8ff1418517",
+
+  },
+
+  {    
+    genero: "regaetton",
+    autor: "Arcangel",
+    nombreCancion: "Guaya",
+    url: "https://player.vimeo.com/video/39443855?h=27de5",
+
+  },
+
+  {    
+    genero: "regaetton",
+    autor: "Arcangel y J alvarez",
+    nombreCancion: "Regalame una noche mas",
+    url: "https://player.vimeo.com/video/13325586?h=9be1d362dc",
+
+  },
+
+  {    
+    genero: "regaetton",
+    autor: "Bad bunny",
+    nombreCancion: "Vete",
+    url: "https://player.vimeo.com/video/374073219?h=9740674b2d&title=0&byline=0&portrait=0",
+
+  },
+
+  {    
+    genero: "regaetton",
+    autor: "Bad bunny",
+    nombreCancion: "Bichiyal Feat. Yaviah",
+    url: "https://player.vimeo.com/video/397095915?h=8a56f7b6a0&title=0&byline=0&portrait=0",
+
+  },
+
+  {    
+    genero: "regaetton",
+    autor: "Karol G",
+    nombreCancion: "Ella",
+    url: "https://player.vimeo.com/video/216588299?h=dc0ba7f802",
+
+  },
+
+  {    
+    genero: "regaetton",
+    autor: "Karol G",
+    nombreCancion: "Bichota",
+    url: "https://player.vimeo.com/video/488734904?h=4ac1f2553e",
+
+  },
+
+  {    
+    genero: "regaetton",
+    autor: "Maluma",
+    nombreCancion: "HP",
+    url: "https://player.vimeo.com/video/322104517?h=fbe29006bb",
+
+  },
+
+  {    
+    genero: "regaetton",
+    autor: "Maluma",
+    nombreCancion: "Mala mia",
+    url: "https://player.vimeo.com/video/287324884?h=574d6670b8",
+
+  },
+
+  {    
+    genero: "regaetton",
+    autor: "J balvin",
+    nombreCancion: "Reggaeton",
+    url: "https://player.vimeo.com/video/300653734?h=175f24f63a&title=0&byline=0&portrait=0",
+
+  },
+
+  {    
+    genero: "regaetton",
+    autor: "J balvin",
+    nombreCancion: "Tranquila",
+    url: "https://player.vimeo.com/video/55973558?h=f1101b1980",
+
+  },
+
+  {    
+    genero: "merengue",
+    autor: "Juan Luis Guerra",
+    nombreCancion: "Kitipun",
+    url: "https://player.vimeo.com/video/330379117?h=5e0ee6af62",
+
+  },
+
+  {    
+    genero: "merengue",
+    autor: "Zumbalo",
+    nombreCancion: "Me siento bien",
+    url: "https://player.vimeo.com/video/163697849?h=684c722ab3",
+
+  },
+
+  {    
+    genero: "merengue",
+    autor: "Eddy herrera",
+    nombreCancion: "Zumbalo-Ajena",
+    url: "https://player.vimeo.com/video/95186403?h=05395ae44f",
+
+  }
 ];
 
 
