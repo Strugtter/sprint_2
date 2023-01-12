@@ -8,17 +8,19 @@
         display: flex;
         flex-direction: column;
         padding: 50px;
-        background-color:white;
+        background-color:black;
         gap:20px;
+        color: white;
 
     }
     
     
     #contenedorVideos{
         display: flex;
-        gap: 100px;
+        gap: 20px;
         flex-wrap: wrap;
         justify-content: space-evenly;
+        color: white;
 
     }
 
@@ -51,8 +53,27 @@
         gap: 665px;
     }
 
-    #agregarVideo{
+    #agregarVideo, #linkAdd{
         float:right;
+        color: white;
+    }
+
+    .video_delete{
+        font-size: 20px;
+        position: absolute;
+        top:0;
+        background-color: transparent;
+        border: none;
+        display: none;
+    }
+
+    .video_delete:hover{
+        transform:scale(0.8);
+        cursor: pointer;
+    }
+
+    .main_videos:hover .video_delete {
+        display: block;
     }
 
 

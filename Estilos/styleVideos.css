@@ -8,9 +8,10 @@ body{
     display: flex;
     flex-direction: column;
     padding: 50px;
-    background-color:white;
+    background-color:black;
     gap: 50px;
     font-size: x-large;
+    color: white;
 }
 
 
@@ -27,6 +28,10 @@ body{
 .form input, .form select, .form button{
     width: 360px;
     height: 30px;
+}
+
+#link{
+    color: white;
 }
 
 @media screen and (max-width: 370px){ 

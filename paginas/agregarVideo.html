@@ -9,12 +9,12 @@
   </head>
   <body>
     <header>
-      <h2 id="title"><a href="../index.html">PRINCIPAL</a></h2>
+      <h2 id="title"><a href="../index.html" id="link">PRINCIPAL</a></h2>
     </header>
     <main class="Main">
       <form class="form">
         <label for="genero" id="etiqueta1"> Genero </label>
-        <select name="" id="genero" required>
+        <select name="" id="genero">
           <option value="">Seleccione una opción</option>
           <option value="salsa">Salsa</option>
           <option value="regaetton">Regaetton</option>
@@ -22,15 +22,15 @@
         </select>
 
         <label for="autor" id="etiqueta2">Autor </label>
-        <input id="autor" type="text" placeholder="Digita el autor de la canción" required />
+        <input id="autor" type="text" placeholder="Digita el autor de la canción"  />
 
         <label for="nombre" id="etiqueta3">Nombre de la cancion </label>
-        <input id="nombreCancion" type="text" placeholder="Digita el nombre de la canción" required />
+        <input id="nombreCancion" type="text" placeholder="Digita el nombre de la canción"  />
 
         <label for="url" id="etiqueta4">URL del video </label>
-        <input id="url" type="text" placeholder="Ingrese el link del video" required />
+        <input id="url" type="text" placeholder="Ingrese el link del video"  />
 
-        <button type="submit" id="botonAgregar">AGREGAR</button>
+        <button type="submit">AGREGAR</button>
       </form>
     </main>
 

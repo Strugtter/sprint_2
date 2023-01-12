@@ -75,6 +75,7 @@ const imprimirVideos = (videos, contenedor) => {
           ></iframe>
           <h1 class="nameCancion" >Titulo: ${video.nombreCancion}</h1>
           <h3 class="nameAutor" id=${videos.indexOf(video)} >Autor: ${video.autor}</h3> 
+          <button class="video_delete" name='${videos.indexOf(video)}'> ❌</button>
 
         `;
     contenedor.appendChild(article);
@@ -144,5 +145,44 @@ document.addEventListener("click", (event)=> {
    window.location.href = "./paginas/datosVideo.html";
 
  }
+
+ if(target.classList.contains('video_delete')){
+
+  console.log(target.name);
+   
+ //     const confirmDelete = confirm('¿Esta seguro de eliminar este video?')
+      Swal.fire({
+        title: 'Esta seguro de eliminar?',
+        text: "Tu quieres revertir esto!",
+        icon: 'Advertencia',
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'Yes, delete it!'
+      }).then((result) => {
+        if (result.isConfirmed) {
+          Swal.fire(
+            'Eliminado!',
+            'Se ha eliminado.',
+            'success'
+          );
+            // Encontrar la posicion del elemento del array.
+            const idVideoDelete = parseInt(target.name);
+
+            console.log("test11111");
+            console.log(idVideoDelete);
+            const positionVideo = videos.findIndex(video => videos.indexOf(video)=== idVideoDelete )
+            console.log("tettttt");
+            videos.splice(positionVideo,1); 
+            console.log(positionVideo);
+            // Mostrar nuevamente los videos
+            imprimirVideos(videos,contenedor);            
+        }
+      })
+
+  }
 })
+
+
+
 

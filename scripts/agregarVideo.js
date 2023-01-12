@@ -17,19 +17,32 @@ form.addEventListener("submit", (event) => {
     }
   });
 
+    // validadcion de javaScript 
+    let propertyVideo=0;
+    let validacionForm=0;
+    for (const key in formInfo) {
+      propertyVideo = formInfo[key];
+      if(!propertyVideo){
+        alert(`El campo ${key} no se encuentra diligenciado`);
+        validacionForm = true;
+        break;
+      }        
+    }
+
   let Local = JSON.parse(localStorage.getItem("nuevoVideo"));
   let repeat;
   if (Local == null){
         ;
   } else {
-  repeat = Local.find((elemento) => elemento.nombreCancion == formInfo.nombreCancion);
+  repeat = Local.find((elemento) => elemento.url == formInfo.url);
   }
   console.log(repeat);
 
   if (repeat != null || repeat != undefined ){
         alert("El video ya se encuentra en la lista");
         repeat = "";
-  } else {
+  } else if (validacionForm != true){
+    
   if (localStorage.getItem("nuevoVideo")) {
     almacenados = JSON.parse(localStorage.getItem("nuevoVideo"));
     almacenados.push(formInfo);
@@ -43,3 +56,8 @@ form.addEventListener("submit", (event) => {
 
 
 
+
+
+
+
+  
